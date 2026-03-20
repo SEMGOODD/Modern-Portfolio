@@ -35,10 +35,10 @@ export const AboutSection = () => {
   };
 
   return (
-    <section id="about" className="py-24 px-4 relative flex justify-center">
-      <div className="container w-full max-w-7xl mx-auto">
+    <section id="about" className="relative pt-28 pb-24 md:py-24 px-4 bg-secondary/10">
+      <div className="container max-w-6xl mx-auto">
         
-        <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">
           About <span className="text-primary">Me</span>
         </h2>
 
