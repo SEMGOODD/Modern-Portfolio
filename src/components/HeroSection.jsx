@@ -41,7 +41,7 @@ export const HeroSection = () => {
           {/* Outer ring with cosmic glow to match theme */}
           <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] rounded-full p-2 bg-gradient-to-tr from-primary/30 to-transparent border border-primary/20 shadow-[0_0_40px_rgba(139,92,246,0.2)]">
             <img
-              src="src/assets/image-pro_ayoubsemgat.jpg" 
+              src="/assets/image-pro_ayoubsemgat.jpg" 
               alt="Ayoub Semgat"
               className="w-full h-full object-cover rounded-full border-4 border-background/50"
             />
