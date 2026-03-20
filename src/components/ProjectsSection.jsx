@@ -5,46 +5,79 @@ import { cn } from "@/lib/utils";
 const projects = [
   {
     id: 1,
-    subtitle: "FinTech",
-    title: "Web Development",
-    description: "Developing real-time concurrent systems with Scala and Akka, applying financial data analysis algorithms. Building an interactive portfolio tracking web interface with React.",
-    image: "/img/portfolio-7.png", 
-    tags: ["Scala", "Akka", "React"],
-    demoUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: 2,
-    subtitle: "Cybersecurity",
-    title: "Secure Messaging App",
-    description: "Ensuring GDPR compliance by developing a Django-based POC. Creation of a directory of anonymization solutions and a benchmarking analysis for secure platforms.",
-    image: "/img/portfolio-9.png",
-    tags: ["Django", "Pandas", "MySQL"],
-    demoUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: 3,
-    subtitle: "Development",
-    title: "Academic Management",
-    description: "Creation of a J2EE web application for academic management with features for students, teachers, and administrators. Versioned with Spring Boot.",
-    image: "/img/portfolio-10.png",
-    tags: ["J2EE", "Spring Boot", "Web"],
-    demoUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: 4,
     subtitle: "DevOps",
     title: "GCP CI/CD Pipeline",
     description: "Automated Deployment Pipeline on Google Cloud Platform. Implementation of a robust CI/CD workflow for cloud-native applications.",
     image: "/img/portfolio-1.jpg",
     tags: ["GCP", "CI/CD", "Docker"],
-    demoUrl: "#",
-    githubUrl: "#",
+    demoUrl: "https://gcp-project5-612446050678.europe-west9.run.app/",
+    githubUrl: "https://github.com/SEMGOODD/CICD_GCP",
+  },
+  {
+    id: 2,
+    subtitle: "DevOps / Infrastructure",
+    title: "Automated Proxmox Deployment",
+    description: "Infrastructure-as-Code project for Proxmox. Automates the provisioning of Ubuntu VMs with Terraform and configures a FastAPI/PostgreSQL stack using Ansible with secured secrets management.",
+    image: "/img/portfolio-6.jpg",
+    tags: ["Terraform", "Ansible", "Proxmox"],
+    githubUrl: "https://github.com/SEMGOODD/Terraform_Ansible_TP"
+  },
+  {
+    id: 3,
+    subtitle: "Full Stack",
+    title: "Pokemon Drafter",
+    description: "Advanced drafting application built with a Java Spring Boot backend and a modern Angular frontend.",
+    image: "/img/image.png", 
+    tags: ["Spring Boot", "Angular", "API"],
+    githubUrl: "https://github.com/SEMGOODD/PokemonDrafter",
+  },
+  {
+    id: 4,
+    subtitle: "Software Engineering",
+    title: "Java Reactive Game",
+    description: "Reactive programming project using Java to manage infinite concurrent players in a real-time environment.",
+    image: "/img/portfolio-1.jpg", 
+    tags: ["Java", "Reactive", "Concurrence"],
+    githubUrl: "https://github.com/LF2Zetrei/offworld-trading-manager",
   },
   {
     id: 5,
+    subtitle: "Backend",
+    title: "RSS (Feeds) API",
+    description: "High-performance API developed in Rust for managing and serving RSS data feeds efficiently.",
+    image: "/img/portfolio-8.png", 
+    tags: ["Rust", "API", "Backend"],
+    githubUrl: "https://github.com/SEMGOODD/RSSFeedsAPI",
+  },
+  {
+    id: 6,
+    subtitle: "FinTech",
+    title: "Web Development",
+    description: "Developing real-time concurrent systems with Scala and Akka, applying financial data analysis algorithms. Building an interactive portfolio tracking web interface with React.",
+    image: "/img/portfolio-7.png", 
+    tags: ["Scala", "Akka", "React"],
+  },
+  {
+    id: 7,
+    subtitle: "Cybersecurity",
+    title: "Secure Messaging App",
+    description: "Ensuring GDPR compliance by developing a Django-based POC. Creation of a directory of anonymization solutions and a benchmarking analysis for secure platforms.",
+    image: "/img/portfolio-9.png",
+    tags: ["Django", "Pandas", "MySQL"],
+    githubUrl: "https://github.com/abdemeh/PlateformeRGPD",
+  },
+  {
+    id: 8,
+    subtitle: "Development",
+    title: "Academic Management",
+    description: "Creation of a J2EE web application for academic management with features for students, teachers, and administrators. Versioned with Spring Boot.",
+    image: "/img/portfolio-10.png",
+    tags: ["J2EE", "Spring Boot", "Web"],
+    githubUrl: "https://github.com/LIMAMMohamedlimam/Projet_J2EE",
+    demoUrl: "https://github.com/SEMGOODD/Projet_J2EE_SpringBoot",
+  },
+  {
+    id: 9,
     subtitle: "Systems & Rust",
     title: "Chess Engine",
     description: "A complete chess game logic implemented in Rust, focusing on memory safety and high-performance move calculation.",
@@ -54,64 +87,21 @@ const projects = [
     githubUrl: "#",
   },
   {
-    id: 6,
+    id: 10,
     subtitle: "Embedded Software",
     title: "Intelligent Road Lighting",
     description: "Model of an intelligent public lighting system that illuminates based on real-time road traffic needs to optimize energy consumption.",
     image: "/img/portfolio-3.jpg",
     tags: ["IoT", "Simulation", "Smart City"],
-    demoUrl: "#",
-    githubUrl: "#",
   },
   {
-    id: 7,
+    id: 11,
     subtitle: "Development",
     title: "Programming Exercise App",
     description: "Graphical application using Java to verify and evaluate users solving various programming exercises in multiple languages.",
     image: "/img/portfolio-5.jpg",
     tags: ["Java", "Swing/FX", "Software"],
-    demoUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: 8,
-    subtitle: "Website Creation",
-    title: "High Center Data Manager",
-    description: "Optimized data exchange between center members. Managed multi-user tables and streamlined access to key information while ensuring data security.",
-    image: "/img/portfolio-6.jpg",
-    tags: ["Web", "Data Management", "Security"],
-    demoUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: 9,
-    subtitle: "Full Stack",
-    title: "Pokemon Drafter",
-    description: "Advanced drafting application built with a Java Spring Boot backend and a modern Angular frontend.",
-    image: "/img/portfolio-4.jpg", 
-    tags: ["Spring Boot", "Angular", "API"],
-    demoUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: 10,
-    subtitle: "Backend",
-    title: "RSS (Feeds) API",
-    description: "High-performance API developed in Rust for managing and serving RSSI data feeds efficiently.",
-    image: "/img/portfolio-8.png", 
-    tags: ["Rust", "API", "Backend"],
-    demoUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: 11,
-    subtitle: "Software Engineering",
-    title: "Java Reactive Game",
-    description: "Reactive programming project using Java to manage infinite concurrent players in a real-time environment.",
-    image: "/img/portfolio-1.jpg", 
-    tags: ["Java", "Reactive", "Concurrence"],
-    demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/LIMAMMohamedlimam/CodYnGame",
   },
   {
     id: 12,
@@ -130,18 +120,26 @@ const projects = [
     description: "Current iteration of my portfolio using React and Tailwind CSS, focused on performance and interactivity.",
     image: "/img/portfolio-10.png", 
     tags: ["React", "Tailwind", "Vite"],
-    demoUrl: "#",
-    githubUrl: "#",
+    demoUrl: "https://porfolio-semgood.vercel.app/",
+    githubUrl: "https://github.com/SEMGOODD/Modern-Portfolio",
   },
   {
     id: 14,
-    subtitle: "Portfolio",
-    title: "Legacy HTML/CSS Portfolio",
-    description: "My first personal website built with vanilla HTML, CSS, and basic JavaScript to showcase fundamental web skills.",
-    image: "/img/portfolio-7.png", 
-    tags: ["HTML", "CSS", "Vanilla JS"],
-    demoUrl: "#",
-    githubUrl: "#",
+    subtitle: "Health / Web",
+    title: "DoctoWorld - Teleconsultation Platform",
+    description: "A multilingual teleconsultation app for international students featuring AI assistance, online payments, and digital QR code prescriptions.",
+    image: "/img/portfolio-4.jpg",
+    tags: ["PHP", "MySQL", "AI"],
+    demoUrl: "https://youtu.be/1I2jQeSiz8k",
+  },
+  {
+    id: 15,
+    subtitle: "E-commerce",
+    title: "CY Play - IT Hardware Store",
+    description: "An IT e-commerce platform with secure authentication, dynamic product catalog, real-time stock management, and a functional shopping cart.",
+    image: "/img/portfolio-5.jpg",
+    tags: ["Web", "E-commerce", "JavaScript"],
+    demoUrl: "https://youtu.be/BKDmPnVYSl8",
   }
 ];
 
@@ -192,15 +190,13 @@ export const ProjectsSection = () => {
                   </h3>
                 </div>
 
-                {/* MODIFICATION ICI : flex-col justify-between pour repousser les icônes en bas */}
                 <div className={cn(
                   "absolute inset-0 bg-primary/95 backdrop-blur-md transition-all duration-500 p-6 md:p-8 flex flex-col justify-between items-center text-center",
                   isActive ? "opacity-100 pointer-events-auto" : "opacity-0 md:group-hover:opacity-100 pointer-events-none"
                 )}>
-                  {/* Partie haute : Tags et Titre */}
                   <div className="w-full">
                     <div className="flex flex-wrap justify-center gap-2 mb-4">
-                      {project.tags.map((tag, i) => (
+                      {project.tags?.map((tag, i) => (
                         <span key={i} className="px-3 py-1 bg-white/20 rounded-full text-xs font-bold text-white uppercase">
                           {tag}
                         </span>
@@ -211,16 +207,13 @@ export const ProjectsSection = () => {
                       {project.title}
                     </h3>
                   </div>
-                  
-                  {/* Partie centrale : Description avec overflow-y-auto pour le défilement */}
+                    
                   <div className="w-full flex-grow overflow-y-auto mb-4 px-2 custom-scrollbar">
-                    {/* Suppression de line-clamp-6 pour permettre le défilement */}
                     <p className="text-white/95 text-base md:text-lg leading-relaxed font-medium">
                       {project.description}
                     </p>
                   </div>
 
-                  {/* Partie basse : Boutons */}
                   <div className="flex gap-6 mt-auto shrink-0" onClick={(e) => {
                     if (!isActive && window.innerWidth < 768) {
                       e.preventDefault();
@@ -228,24 +221,29 @@ export const ProjectsSection = () => {
                     }
                     e.stopPropagation();
                   }}>
-                    <a 
-                      href={project.demoUrl} 
-                      target="_blank" 
-                      rel="noreferrer" 
-                      tabIndex={isActive ? 0 : -1} 
-                      className="p-4 bg-white text-primary rounded-full hover:bg-black hover:text-white transition-all duration-300 shadow-lg transform hover:scale-110"
-                    >
-                      <ExternalLink size={24} />
-                    </a>
-                    <a 
-                      href={project.githubUrl} 
-                      target="_blank" 
-                      rel="noreferrer" 
-                      tabIndex={isActive ? 0 : -1}
-                      className="p-4 bg-white text-primary rounded-full hover:bg-black hover:text-white transition-all duration-300 shadow-lg transform hover:scale-110"
-                    >
-                      <Github size={24} />
-                    </a>
+                    {project.demoUrl && project.demoUrl !== "#" && (
+                      <a 
+                        href={project.demoUrl} 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        tabIndex={isActive ? 0 : -1} 
+                        className="p-4 bg-white text-primary rounded-full hover:bg-black hover:text-white transition-all duration-300 shadow-lg transform hover:scale-110"
+                      >
+                        <ExternalLink size={24} />
+                      </a>
+                    )}
+
+                    {project.githubUrl && project.githubUrl !== "#" && (
+                      <a 
+                        href={project.githubUrl} 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        tabIndex={isActive ? 0 : -1}
+                        className="p-4 bg-white text-primary rounded-full hover:bg-black hover:text-white transition-all duration-300 shadow-lg transform hover:scale-110"
+                      >
+                        <Github size={24} />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -265,7 +263,6 @@ export const ProjectsSection = () => {
         </div>
       </div>
 
-      {/* Styles pour affiner la barre de défilement afin qu'elle reste discrète */}
       <style>{`
         .custom-scrollbar::-webkit-scrollbar {
           width: 4px;

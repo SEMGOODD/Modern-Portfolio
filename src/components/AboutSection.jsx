@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { Star } from "lucide-react";
 
 export const AboutSection = () => {
-  const [activeTab, setActiveTab] = useState("certification");
+  const [activeTab, setActiveTab] = useState("experience");
   const [activeExpIndex, setActiveExpIndex] = useState(0);
   const scrollRef = useRef(null);
 
@@ -60,7 +60,7 @@ export const AboutSection = () => {
           </div>
 
           <div className="flex flex-col lg:col-span-7 w-full">
-            <div className="flex flex-wrap gap-x-6 gap-y-2 border-b border-border/50 mb-6 pb-2 justify-start overflow-x-auto no-scrollbar whitespace-nowrap">
+            <div className="flex flex-col lg:flex-row lg:flex-wrap gap-x-6 gap-y-4 border-b border-border/50 mb-8 pb-4 lg:pb-2 justify-start w-full">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
@@ -89,7 +89,7 @@ export const AboutSection = () => {
                     </div>
                     <div className="relative pl-6 border-l-2 border-primary/50">
                       <span className="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-background border-2 border-primary"></span>
-                      <h4 className="font-semibold text-foreground text-xl md:text-2xl">Bachelor's Degree in Math Sciences <span className="text-primary text-sm md:text-base font-semibold ml-3 border border-primary/30 px-2 py-0.5 rounded-full inline-block mt-2 md:mt-0">2020 - 2021</span></h4>
+                      <h4 className="font-semibold text-foreground text-xl md:text-2xl">Baccalaureate's Degree in Math Sciences <span className="text-primary text-sm md:text-base font-semibold ml-3 border border-primary/30 px-2 py-0.5 rounded-full inline-block mt-2 md:mt-0">2020 - 2021</span></h4>
                       <p className="text-muted-foreground text-base md:text-lg mt-2">Very good mention. 11 January High School, Ain Taoujdat, Morocco.</p>
                     </div>
                   </div>

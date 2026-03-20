@@ -10,7 +10,6 @@ const navItems = [
   { name: "Contact", href: "#contact" },
 ];
 
-// Intégration du ThemeToggle directement dans la Navbar
 export const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -20,7 +19,6 @@ export const ThemeToggle = () => {
       setIsDarkMode(true);
       document.documentElement.classList.add("dark");
     } else {
-      // Par défaut on peut forcer le mode dark si tu préfères, ou laisser 'light'
       setIsDarkMode(false);
     }
   }, []);
@@ -65,17 +63,25 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [isMenuOpen]);
+
   return (
     <nav
       className={cn(
-        "fixed w-full z-50 transition-all duration-300", // z-50 pour être sûr d'être au-dessus de tout
+        "fixed w-full z-[100] transition-all duration-300",
         isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
       )}
     >
       <div className="container flex items-center justify-between">
         {/* LOGO */}
         <a
-          className="text-2xl font-black flex items-center tracking-tighter z-50"
+          className="text-2xl font-black flex items-center tracking-tighter z-[110]"
           href="#"
         >
           <span className="relative">
@@ -107,7 +113,7 @@ export const Navbar = () => {
         </div>
 
         {/* MOBILE NAV (Theme Toggle + Burger Menu) */}
-        <div className="flex md:hidden items-center gap-2 z-50">
+        <div className="flex md:hidden items-center gap-2 z-[110]">
           <ThemeToggle />
           <button
             onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -117,29 +123,29 @@ export const Navbar = () => {
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
+      </div>
 
-        {/* OVERLAY MENU MOBILE */}
-        <div
-          className={cn(
-            "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
-            "transition-all duration-300 md:hidden",
-            isMenuOpen
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
-          )}
-        >
-          <div className="flex flex-col space-y-8 text-2xl text-center font-semibold">
-            {navItems.map((item, key) => (
-              <a
-                key={key}
-                href={item.href}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
+      {/* OVERLAY MENU MOBILE (SORTI DU CONTAINER) */}
+      <div
+        className={cn(
+          "fixed inset-0 w-screen h-screen bg-background/98 backdrop-blur-xl z-[105] flex flex-col items-center justify-center",
+          "transition-all duration-300 ease-in-out md:hidden",
+          isMenuOpen
+            ? "opacity-100 translate-x-0 pointer-events-auto"
+            : "opacity-0 translate-x-full pointer-events-none"
+        )}
+      >
+        <div className="flex flex-col space-y-8 text-2xl text-center font-semibold w-full px-6">
+          {navItems.map((item, key) => (
+            <a
+              key={key}
+              href={item.href}
+              className="text-foreground/80 hover:text-primary hover:scale-110 transition-all duration-300 py-4 border-b border-border/20 last:border-0"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {item.name}
+            </a>
+          ))}
         </div>
       </div>
     </nav>

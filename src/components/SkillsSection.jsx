@@ -66,7 +66,6 @@ export const SkillsSection = () => {
           ))}
         </div>
 
-        {/* GRILLE : grid-cols-2 sur mobile, 5 sur desktop */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {filteredSkills.map((skill, key) => (
             <div
@@ -81,13 +80,12 @@ export const SkillsSection = () => {
               
               <div className="space-y-4">
                 <div className="relative w-full bg-secondary/40 h-1.5 rounded-full">
-                  {/* Barre de progression */}
+
                   <div
                     className="absolute top-0 left-0 bg-primary h-full rounded-full origin-left animate-[grow_2s_ease-out]"
                     style={{ width: skill.level + "%" }}
                   />
                   
-                  {/* LE VAISSEAU (Fusée) */}
                   <div 
                     className="absolute top-[-10px] left-0 flex items-center justify-end animate-[grow_2s_ease-out]"
                     style={{ width: skill.level + "%" }}
