@@ -4,7 +4,8 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden"
+      // AJOUT DE pt-24 (padding-top 6rem) sur mobile, annulé par md:pt-0 sur desktop
+      className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden pt-24 md:pt-0"
     >
       <div className="container max-w-6xl mx-auto z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         
@@ -41,7 +42,7 @@ export const HeroSection = () => {
           {/* Outer ring with cosmic glow to match theme */}
           <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] rounded-full p-2 bg-gradient-to-tr from-primary/30 to-transparent border border-primary/20 shadow-[0_0_40px_rgba(139,92,246,0.2)]">
             <img
-              src="/assets/image-pro_ayoubsemgat.jpg" 
+              src="/img/image-pro_ayoubsemgat.jpg" // CORRIGÉ AVEC /img/
               alt="Ayoub Semgat"
               className="w-full h-full object-cover rounded-full border-4 border-background/50"
             />
