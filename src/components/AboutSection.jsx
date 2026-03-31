@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { Star } from "lucide-react";
+import { Star, Rocket, Activity, Trophy, Telescope, BrainCircuit } from "lucide-react";
 
 export const AboutSection = () => {
   const [activeTab, setActiveTab] = useState("experience");
@@ -11,6 +11,8 @@ export const AboutSection = () => {
     { id: "language", label: "Languages" },
     { id: "experience", label: "Professional Experiences" },
     { id: "associative", label: "Associative" },
+    { id: "interests", label: "Interests"},
+    { id: "goals", label: "Future Goals"}
   ];
 
   const handleScroll = () => {
@@ -232,6 +234,52 @@ export const AboutSection = () => {
                       <p className="text-base md:text-lg text-muted-foreground mt-2 leading-relaxed">
                         Facilitated a conference on the need for wastewater purification to solve drought issues.
                       </p>
+                    </div>
+                  </div>
+                )}
+
+                {/* Interests & Hobbies */}
+                {activeTab === "interests" && (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 animate-fade-in px-4">
+                    <div className="group p-6 rounded-xl bg-primary/5 border border-primary/20 hover:border-primary transition-all duration-300">
+                      <Telescope className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
+                      <h4 className="text-xl font-bold mb-2">Astronomy</h4>
+                      <p className="text-muted-foreground">Passionate about space exploration and celestial mechanics. This interest inspired the entire "Cosmic" design of this portfolio.</p>
+                    </div>
+                    <div className="group p-6 rounded-xl bg-primary/5 border border-primary/20 hover:border-primary transition-all duration-300">
+                      <Activity className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
+                      <h4 className="text-xl font-bold mb-2">Sport & Football</h4>
+                      <p className="text-muted-foreground">
+                        A passionate football player and sports enthusiast in general. Playing team sports has allowed me to develop my teamwork skills, discipline, and sense of collective effort.  
+                      </p>
+                    </div>
+                    <div className="group p-6 rounded-xl bg-primary/5 border border-primary/20 hover:border-primary transition-all duration-300">
+                      <Trophy className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
+                      <h4 className="text-xl font-bold mb-2">Strategy Games</h4>
+                      <p className="text-muted-foreground">Playing chess and strategy games to sharpen problem-solving skills and long-term planning mindset.</p>
+                    </div>
+                  </div>
+                )}
+
+                {/* Future Goals / Learning Path */}
+                {activeTab === "goals" && (
+                  <div className="space-y-8 animate-fade-in px-4">
+                    <div className="flex items-start gap-4 p-4 rounded-lg bg-primary/5 border-l-4 border-primary">
+                      <Rocket className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
+                      <div>
+                        <h4 className="text-xl font-bold">Advanced MLOps Pipeline</h4>
+                        <p className="text-muted-foreground italic">Short-term Goal (Q3 2026)</p>
+                        <p className="mt-2 text-lg">Aiming to build a fully automated deployment pipeline for LLMs using Kubernetes and Kubeflow to handle real-time inference at scale.</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4 p-4 rounded-lg bg-primary/5 border-l-4 border-primary/50">
+                      <BrainCircuit className="w-8 h-8 text-primary/70 mt-1 flex-shrink-0" />
+                      <div>
+                        <h4 className="text-xl font-bold">Cloud Architect Certification</h4>
+                        <p className="text-muted-foreground italic">Professional Development</p>
+                        <p className="mt-2 text-lg">Preparing for the AWS Certified Solutions Architect exam to deepen my expertise in cloud-native infrastructure and security, same for others cetifications.</p>
+                      </div>
                     </div>
                   </div>
                 )}
