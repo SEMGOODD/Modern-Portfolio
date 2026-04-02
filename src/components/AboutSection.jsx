@@ -240,24 +240,41 @@ export const AboutSection = () => {
 
                 {/* Interests & Hobbies */}
                 {activeTab === "interests" && (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 animate-fade-in px-4">
-                    <div className="group p-6 rounded-xl bg-primary/5 border border-primary/20 hover:border-primary transition-all duration-300">
-                      <Telescope className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                      <h4 className="text-xl font-bold mb-2">Astronomy</h4>
-                      <p className="text-muted-foreground">Passionate about space exploration and celestial mechanics. This interest inspired the entire "Cosmic" design of this portfolio.</p>
-                    </div>
-                    <div className="group p-6 rounded-xl bg-primary/5 border border-primary/20 hover:border-primary transition-all duration-300">
-                      <Activity className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                      <h4 className="text-xl font-bold mb-2">Sport & Football</h4>
-                      <p className="text-muted-foreground">
-                        A passionate football player and sports enthusiast in general. Playing team sports has allowed me to develop my teamwork skills, discipline, and sense of collective effort.  
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in px-4">
+                    
+                    {/* Card 1: Astronomy */}
+                    <div className="group flex flex-col h-full p-6 rounded-xl bg-primary/5 border border-primary/20 hover:border-primary transition-all duration-300 shadow-lg">
+                      <div className="mb-4 p-3 rounded-lg bg-primary/10 w-fit group-hover:bg-primary/20 transition-colors">
+                        <Telescope className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
+                      </div>
+                      <h4 className="text-xl font-bold mb-2 text-foreground">Astronomy</h4>
+                      <p className="text-muted-foreground leading-relaxed flex-grow">
+                        Passionate about space exploration and celestial mechanics. This interest inspired the entire "Cosmic" design of this portfolio.
                       </p>
                     </div>
-                    <div className="group p-6 rounded-xl bg-primary/5 border border-primary/20 hover:border-primary transition-all duration-300">
-                      <Trophy className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                      <h4 className="text-xl font-bold mb-2">Strategy Games</h4>
-                      <p className="text-muted-foreground">Playing chess and strategy games to sharpen problem-solving skills and long-term planning mindset.</p>
+
+                    {/* Card 2: Sport & Football */}
+                    <div className="group flex flex-col h-full p-6 rounded-xl bg-primary/5 border border-primary/20 hover:border-primary transition-all duration-300 shadow-lg">
+                      <div className="mb-4 p-3 rounded-lg bg-primary/10 w-fit group-hover:bg-primary/20 transition-colors">
+                        <Activity className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
+                      </div>
+                      <h4 className="text-xl font-bold mb-2 text-foreground">Sport & Football</h4>
+                      <p className="text-muted-foreground leading-relaxed flex-grow">
+                        A passionate football player and sports enthusiast in general. Playing team sports has allowed me to develop my teamwork skills, discipline, and sense of collective effort.
+                      </p>
                     </div>
+
+                    {/* Card 3: Strategy Games */}
+                    <div className="group flex flex-col h-full p-6 rounded-xl bg-primary/5 border border-primary/20 hover:border-primary transition-all duration-300 shadow-lg sm:col-span-2 lg:col-span-1">
+                      <div className="mb-4 p-3 rounded-lg bg-primary/10 w-fit group-hover:bg-primary/20 transition-colors">
+                        <Trophy className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
+                      </div>
+                      <h4 className="text-xl font-bold mb-2 text-foreground">Strategy Games</h4>
+                      <p className="text-muted-foreground leading-relaxed flex-grow">
+                        Playing chess and strategy games to sharpen problem-solving skills and long-term planning mindset.
+                      </p>
+                    </div>
+
                   </div>
                 )}
 
